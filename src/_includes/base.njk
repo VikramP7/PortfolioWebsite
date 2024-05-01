@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+            integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+            crossorigin="anonymous"/>
+        <link
+            href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <a href="/" class="logo__link">Vikram Procter</a>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamberger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="/#home" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/#about" class="nav__link">About Me</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/#portfolio" class="nav__link">My Work</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        {{ content | safe }}
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:vikram.procter@gmail.com" class="footer__link">vikram.procter@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a href="https://www.linkedin.com/in/vikram-procter/" target="_blank" class="social-list__link">
+                        <i class="devicon-linkedin-plain"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="https://github.com/VikramP7" target="_blank" class="social-list__link">
+                        <i class="devicon-github-original"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a href="mailto:vikram.procter@gmail.com" target="_blank" class="social-list__link">
+                        <span class="material-symbols-outlined">
+                            mail
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <p class="footer_copyright">&copy; 2024 | Designed and Coded by Vikram Procter</p>
+        </footer>
+        <script src="/js/main.js"></script>
+    </body>
+</html>
