@@ -582,6 +582,7 @@ header {
     align-self: center;
     flex-wrap: wrap;
     margin-bottom: 2em;
+    padding: 0;
 }
 
 .portfolio-page__tag {
