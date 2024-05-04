@@ -567,6 +567,14 @@ header {
     color: var(--clr-light);
 }
 
+.portfolio-page__ref:link {
+    color: aqua;
+}
+
+.portfolio-page__ref:visited {
+    color: var(--clr-accent);
+}
+
 .portfolio-page__item {
     justify-content: center;
 }
