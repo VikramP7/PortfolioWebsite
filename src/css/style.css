@@ -69,7 +69,9 @@ strong {
     font-weight: var(--fw-bold);
 }
 
-
+.svg-icon {
+    filter: invert(1);
+}
 
 
 /* --- Buttons --- */
