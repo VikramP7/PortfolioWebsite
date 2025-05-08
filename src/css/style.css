@@ -456,9 +456,8 @@ header {
 
 .svg-icon {
     filter: invert(1);
-    max-height: min-content;
+    max-height: 4.5em;
 }
-
 
 /* --- My Portfolio --- */
 .my-projects {
