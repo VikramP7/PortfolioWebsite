@@ -436,7 +436,7 @@ header {
 
 .toolbox__tool {
     list-style: none;
-    margin: 0.6em auto;
+    margin: 0.5em auto;
     font-family: var(--ff-secondary);
     cursor: pointer;
     transition: transform 200ms ease-in-out;
