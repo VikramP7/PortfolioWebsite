@@ -6,7 +6,7 @@ layout: base.njk
 <!-- Title Section -->
 <section class="intro">
     <h1 class="section__title section__title--intro">Embedded in Embedded <strong>Buzzer Orchestra</strong></h1>
-    <p class="section__subtitle section__subtitle--intro">ANT Radio Playing Polyphonicly</p>
+    <p class="section__subtitle section__subtitle--intro">ANT Radio Playing Polyphonically</p>
     <img src="/img/portfolio-04a.png" alt="" class="intro__img">
 </section>
 
@@ -22,23 +22,14 @@ layout: base.njk
         </ul>
         <img src="/img/portfolio-04b.png" alt="" class="portfolio-page__img">
         <div class="portfolio-page__description">
-            <p>Aliquam eget porttitor risus, eu hendrerit sapien. Aliquam vel nunc id dui
-                semper scelerisque. Duis in vestibulum
-                dolor.
-                Maecenas sollicitudin tortor eget nunc volutpat maximus ut ut massa. Integer non neque sed diam
-                condimentum
-                aliquet.
-                Donec porttitor augue ac pretium tincidunt. Fusce ut dolor nibh. Praesent elementum urna et orci feugiat
-                volutpat
+            <p>Multiple of Embedded in Embedded (EiE) dev boards can synchronously and polyphonically playback MIDI song tracks. 
+                This is a final project with the EiE club which taught me how to program the dev boards which are
+                equipped with SAM3U2 micro controller, LCD, LEDs, buzzers, a nRF51422 ANT/BLE 2.4GHz radio, and more.  
             </p>
-            <p>Aliquam eget porttitor risus, eu hendrerit sapien. Aliquam vel nunc id dui
-                semper scelerisque. Duis in vestibulum
-                dolor.
-                Maecenas sollicitudin tortor eget nunc volutpat maximus ut ut massa. Integer non neque sed diam
-                condimentum
-                aliquet.
-                Donec porttitor augue ac pretium tincidunt. Fusce ut dolor nibh. Praesent elementum urna et orci feugiat
-                volutpat
+            <p><strong>How it works: </strong> The boards work how a real orchestra operates. 
+                One board is the <em>Conductor</em> (radio master) and all other boards playing are <em>Instruments</em> (radio slaves), 
+                the Conductor provides the music data to each of the instrument boards and provides timing to ensure all 
+                boards play synchronously. The conductor board provides music data sequentially to each instrument board, once all boards have the music data playback starts.
             </p>
         </div>
         <a href="https://github.com/VikramP7/BuzzerOrchestra_EiE" target="_blank" class="btn portfolio-page__btn">GitHub</a>
