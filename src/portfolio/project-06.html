@@ -1,0 +1,46 @@
+---
+title: Vikram - FPGA MIDI Music Player
+layout: base.njk
+---
+
+<!-- Title Section -->
+<section class="intro">
+    <h1 class="section__title section__title--intro">ENEL 453 Extension <strong>FPGA Music Player</strong></h1>
+    <p class="section__subtitle section__subtitle--intro">MIDI Music Playback in System Verilog</p>
+    <img src="/img/portfolio-06a.jpeg" alt="Image of Custom PCB and Basys3" class="intro__img">
+</section>
+
+<!-- Body Section -->
+<section class="portfolio-item-individual">
+    <div class="portfolio-page__item">
+        <ul class="portfolio-page__tags">
+            <li class="portfolio-page__tag">FPGA Design</li>
+            <li class="portfolio-page__tag">System Verilog</li>
+            <li class="portfolio-page__tag">AMD Vivado</li>
+            <li class="portfolio-page__tag">BASYS3 Artix-7</li>
+            <li class="portfolio-page__tag">ADC Methods</li>
+        </ul>
+        
+        <img src="/img/portfolio-06b.jpeg" alt="Image of Custom PCB and Basys3" class="portfolio-page__img">
+        
+        <div class="portfolio-page__description">
+            <p>
+                This project showcases a custom MIDI music playback system built on a Basys3 Artix-7 FPGA. Python scripts 
+                were developed to parse MIDI files and generate SystemVerilog memory modules that store note pitches and durations, 
+                enabling the FPGA to play full musical sequences through a piezoelectric buzzer.
+            </p>
+            <p>
+                The design uses three core SystemVerilog modules: a Song Player Timer, a Buzzer PWM generator, and a Volume Control 
+                unit driven by an analog input. These modules work within an ADC project created for a Digital Design Course (ENEL 453).
+                Lookup tables map MIDI note indices to PWM periods, while a high-frequency 
+                modulation technique allows dynamic volume control using only the buzzer's mechanical low-pass properties.
+            </p>
+            <p>
+                A custom PCB was created to interface with the Basys3 board, integrating a PWM DAC, an R-2R ladder ADC subsystem, 
+                a potentiometer for adjustable analog input, and connection for the buzzer. All design files, including the PCB, 
+                SystemVerilog files and Python generation tools, are available on my GitHub.
+            </p>
+        </div>
+        <a href="https://github.com/VikramP7/FPGA-MIDI-Player" target="_blank" class="btn portfolio-page__btn">GitHub</a>
+    </div>
+</section>
