@@ -597,8 +597,8 @@ header {
 .portfolio-page__scroll-container img {
     scroll-snap-align: center; /* Center the image in the view when it snaps */
     flex-shrink: 0; /* Prevents images from getting squished */
-    width: 95%; /* Show part of the next image to hint at scrolling */
-    object-fit: cover;
+    width: 97%; /* Show part of the next image to hint at scrolling */
+    object-fit: contain;
     padding: 10px;
 }
 

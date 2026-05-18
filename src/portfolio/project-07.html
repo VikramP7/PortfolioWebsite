@@ -1,5 +1,5 @@
 ---
-title: Vikram - FPGA MIDI Music Player
+title: Vikram - F17 Humanitarian Hummingbird
 layout: base.njk
 ---
 
@@ -7,7 +7,7 @@ layout: base.njk
 <section class="intro">
     <h1 class="section__title section__title--intro">F17 Humanitarian <strong>Hummingbird Drone</strong></h1>
     <p class="section__subtitle section__subtitle--intro">Fully custom PCB drone from Specific Dynamics</p>
-    <img src="/img/portfolio-07a.jpeg" alt="Image of Specific Dynamics Logo" class="intro__img">
+    <img src="/img/portfolio-07a.png" alt="Image of Specific Dynamics Logo" class="intro__img">
 </section>
 
 <!-- Body Section -->
@@ -23,30 +23,33 @@ layout: base.njk
         
         <!--<img src="/img/portfolio-07b.jpeg" alt="Image of Custom PCB and Basys3" class="portfolio-page__img"> -->
         <div class="portfolio-page__scroll-container">
-            <img src="/img/portfolio-01a.jpeg" alt="Cinque Terre">
-            <img src="/img/portfolio-06b.jpeg" alt="Forest">
-            <img src="/img/portfolio-06.jpeg" alt="Northern Lights">
-            <img src="/img/portfolio-04a.jpeg" alt="Mountains">
+            <img src="/img/portfolio-07b3.png" alt="Prototype Render">
+            <img src="/img/portfolio-07b4.png" alt="Prototype Render Exploded">
+            <img src="/img/portfolio-07b1.png" alt="Prototype Perspective">
+            <img src="/img/portfolio-07b2.jpg" alt="Prototype Top">
+            <img src="/img/portfolio-07b5.png" alt="Hardware Block Diagram">
+            <img src="/img/portfolio-07b6.png" alt="Firmware Block Diagram">
         </div>
         
         <div class="portfolio-page__description">
             <p>
-                This project showcases a custom MIDI music playback system built on a Basys3 Artix-7 FPGA. Python scripts 
-                were developed to parse MIDI files and generate SystemVerilog memory modules that store note pitches and durations, 
-                enabling the FPGA to play full musical sequences through a piezoelectric buzzer.
+                The F-17 Humanitarian Hummingbird is a lightweight, fully modular quadrotor microdrone built from scratch as a six-person team for ENEL 400. 
+                Defined by its PCB-as-airframe architecture, where the electronic speed controller board doubles as the structural frame. 
+                The result is a 145 g, low-cost, hackable platform aimed at general-purpose UAV applications. My focus on the team was 
+                the custom brushless motor controller.
             </p>
             <p>
-                The design uses three core SystemVerilog modules: a Song Player Timer, a Buzzer PWM generator, and a Volume Control 
-                unit driven by an analog input. These modules work within an ADC project created for a Digital Design Course (ENEL 453).
-                Lookup tables map MIDI note indices to PWM periods, while a high-frequency 
-                modulation technique allows dynamic volume control using only the buzzer's mechanical low-pass properties.
+                The ESC drives four three-phase motors from a single STM32F405 running bare-metal C. It implements sensorless six-step 
+                trapezoidal commutation, using back-EMF zero-crossing detection to track rotor position without hall sensors. All three on-chip ADCs are triggered in lockstep at 52.5 kHz to sample BEMF across every motor. The finished controller outperformed the 
+                commercial off-the-shelf ESC used as an early stand-in.
             </p>
             <p>
-                A custom PCB was created to interface with the Basys3 board, integrating a PWM DAC, an R-2R ladder ADC subsystem, 
-                a potentiometer for adjustable analog input, and connection for the buzzer. All design files, including the PCB, 
-                SystemVerilog files and Python generation tools, are available on my GitHub.
+                The rest of the system pairs an ESP32-S3 custom flight controller running a 1 kHz cascaded PID loop with Mahony 9-axis sensor 
+                fusion, and a handheld ESP32-C3 remote that streams pilot input over ESP-NOW. Across seven custom PCBs and over 3,000 lines of C, 
+                the drone achieves stable manual hover for roughly 5.5 minutes with usable control range beyond 20 m. To learn more 
+                about the project see the team GitHub.
             </p>
         </div>
-        <a href="https://github.com/VikramP7/FPGA-MIDI-Player" target="_blank" class="btn portfolio-page__btn">GitHub</a>
+        <a href="https://github.com/Specific-Dynamics/F17-Humanitarian-Hummingbird-Docs/" target="_blank" class="btn portfolio-page__btn">GitHub</a>
     </div>
 </section>
