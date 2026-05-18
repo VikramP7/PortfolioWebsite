@@ -28,7 +28,7 @@
     --bs-light: 0.15em 0.15em 0.25em rgba(0, 0, 0, 0.25)
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
