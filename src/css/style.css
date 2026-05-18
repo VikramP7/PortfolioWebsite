@@ -584,6 +584,24 @@ header {
     box-shadow: var(--bs);
 }
 
+.portfolio-page__scroll-container {
+    grid-area: img;
+    background-color: #333;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory; /* Force snapping on the X axis */
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.portfolio-page__scroll-container img {
+    scroll-snap-align: center; /* Center the image in the view when it snaps */
+    flex-shrink: 0; /* Prevents images from getting squished */
+    width: 95%; /* Show part of the next image to hint at scrolling */
+    object-fit: cover;
+    padding: 10px;
+}
+
 .portfolio-page__tags {
     display: flex;
     justify-content: space-evenly;
