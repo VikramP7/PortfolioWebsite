@@ -1,0 +1,52 @@
+---
+title: Vikram - SOAR LRB
+layout: base.njk
+---
+
+<!-- Title Section -->
+<section class="intro">
+    <h1 class="section__title section__title--intro"> SOAR's <strong>Launch Rail Board</strong></h1>
+    <p class="section__subtitle section__subtitle--intro">Custom PCB for SOAR's ground systems</p>
+    <img src="/img/portfolio-08a.png" alt="Image of Specific Dynamics Logo" class="intro__img">
+</section>
+
+<!-- Body Section -->
+<section class="portfolio-item-individual">
+    <div class="portfolio-page__item">
+        <ul class="portfolio-page__tags">
+            <li class="portfolio-page__tag">STM32G4</li>
+            <li class="portfolio-page__tag">Mixed-Signal PCB</li>
+            <li class="portfolio-page__tag">Analog Front-End</li>
+            <li class="portfolio-page__tag">RS-485</li>
+            <li class="portfolio-page__tag">Power ORing</li>
+        </ul>
+        
+        <!--<img src="/img/portfolio-07b.jpeg" alt="Image of Custom PCB and Basys3" class="portfolio-page__img"> -->
+        <div class="portfolio-page__scroll-container">
+            <img src="/img/portfolio-08b1.jpeg" alt="PCB Overview">
+            <img src="/img/portfolio-08b2.jpeg" alt="PCB top view">
+            <img src="/img/portfolio-08b3.jpeg" alt="Jokes">
+        </div>
+        
+        <div class="portfolio-page__description">
+            <p>
+                The Launch Rail Board (LRB) is a custom data-acquisition board I designed for the Student Organization for Aerospace 
+                Research (SOAR). Mounted on the rocket launch rail inside an IP-rated enclosure, it digitizes ground system sensor data, 
+                then relays it to the Rocket Control Unit's Fill Systems Board. It is built around an STM32G491 microcontroller and is designed 
+                to survive a harsh outdoor launch environment.
+            </p>
+            <p>
+                Each sensor type is handled by a dedicated analog front-end. Sensor data is stored to a 4 Gbit QSPI flash chip allowing for over six hours of continuous logging, 
+                and the board emulates as a USB mass-storage device so data can be offloaded without the rocket's fill system powered. 
+                A keyed SWD header and onboard debug LEDs support bring-up and field diagnostics.
+            </p>
+            <p>
+                The board accepts 48 V from the Fill Systems Board, as primary power, but is equipt with an ORing network to arbitrate between USB, and 
+                programming-header supplies while maintaining reverse-polarity protection. Combined with waterproof 
+                box-edge connectors and a 3D-printed internal mount, the result is a field-deployable board engineered for reliability on 
+                the launch rail. All design files are available on my GitHub.
+            </p>
+        </div>
+        <a href="https://github.com/VikramP7/SOAR_LaunchRailBoard" target="_blank" class="btn portfolio-page__btn">GitHub</a>
+    </div>
+</section>
